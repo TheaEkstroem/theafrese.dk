@@ -1,0 +1,25 @@
+---
+// Henter parametrene fra Astro.props
+const { href="#", target="_self", variant="primary", size="small"} = Astro.props; 
+ 
+//definere den stilling (Tailwind classes) der gør sig gældende fra alle knapper
+const linkStylling = "";
+
+// definere den stilling (Tailwind classes), der gør sig gældende for de forskellige varianter
+const variantClasses = {
+    "primary": "px-4 py-1 rounded-2xl text-[#563939] hover:underline " ,
+    "secondary": "px-4 py-2 rounded-3xl  bg-white text-[#563939] hover:border-[#563939] hover:bg-[#563939] hover:text-white hover:underline",
+    "footer": "text-white underline hover:underline"
+};
+
+//definere den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser
+const sizeClasses = {
+   "small": "text-sm",
+    "medium": "text-mg",
+    "large": "text-lg"
+};
+---
+
+<a href={href} target={target} class:list={[linkStylling ,variantClasses[variant] ,sizeClasses[size]]}>
+    <slot />
+</a>

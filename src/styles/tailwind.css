@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+
+    
+
+    h1 {
+        color: #563939; 
+        font-family: "Rammetto One", Rammetto One;
+         font-size: 90px; 
+         font-style:normal; 
+          font-variant: normal; 
+          font-weight: 700; 
+          line-height: 90px;
+           }
+      h2 {
+        color: #563939; 
+        font-family: "Rammetto One", Rammetto One;
+         font-size: 30px; 
+         font-style: normal; 
+          font-variant: normal; 
+          font-weight: 700; }
+
+      h3 {
+        color: #352525; 
+        font-family: "Rammetto One", Rammetto One;
+         font-size: 20px; 
+         font-style: normal; 
+          font-variant: normal; 
+          font-weight: 700; }
+    
+     h4{
+        color: #EEEAEA; 
+        font-family: 'Playwrite US Modern Variable', cursive;
+        font-size: 30px; 
+         font-style: normal; 
+          font-variant: normal; 
+          font-weight: 700; }
+    
+
+      p {
+        color: #1e1c1c;
+        font-size: 16px;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+ul, li{
+  color: #1e1c1c;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+
+}
+
+      a {
+        color: #1e1c1c;
+        font-family: "Rammetto One", Rammetto One;
+        font-size: 16px;
+        font-style: normal; 
+      }
+
+      .background-color {
+        background-color: #ffffff;
+      }
+      .background-color-footer {
+        background-color: #4F654F;
+      }
+    
+    
+      @media (max-width: 768px) {
+        p {
+          color: #1e1c1c;
+          font-size: 14px;
+          font-family: Helvetica, Arial, sans-serif;
+        }
+        ul, li{
+          color: #1e1c1c;
+          font-size: 14px;
+          font-family: Helvetica, Arial, sans-serif;
+        
+        }
+        h1 {
+            color: #563939; 
+            font-size: 30px;
+            font-family: "Rammetto One", Rammetto One;
+          }
+        h2 {
+            color: #563939; 
+            font-size: 20px;
+          font-family: "Rammetto One", Rammetto One;
+        }
+        h3 {
+            color: #352525; 
+            font-size: 16px;
+          font-family: "Rammetto One", Rammetto One;
+        }
+      h4 {
+        color: #EEEAEA; 
+        font-size: 20px;
+        font-family: 'Playwrite US Modern Variable', cursive;
+      }}
+}

@@ -1,0 +1,100 @@
+---
+import Link from "../components/Link.astro";
+---
+
+<!-- Navigation -->
+ <div class="mt-[90px] px-10">
+<div
+  x-data="{ showmenu: false }"
+  class="px-10 py-3 fixed top-0 left-0 z-50 w-full bg-[#ffffff]"
+
+>
+  <!-- Desktop -->
+  <div id="navbar" class="flex flex-row justify-between">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">
+        <h3>TheaFrese</h3>
+        
+      </a>
+    </div>
+
+    <!-- nav -->
+    <nav
+      id="desktopmenu"
+      class="hidden md:flex md:flex-row md:items-center gap-20"
+    >
+      <ul class="flex flex-row gap-10">
+        <li>
+          <Link size="text-mg" variant="primary" href="#goals"
+            >Goals</Link
+          >
+        </li>
+        <li>  <Link size="text-mg" variant="primary" href="#skills" class="ml-8"
+            >Skills</Link
+          >
+        </li>
+        <li>  <Link size="text-mg" variant="primary" href="#project" class="ml-8"
+          >Project</Link
+        >
+      </li>
+        <li>  <Link size="text-mg" variant="primary" href="#about" class="ml-8"
+            >About Me</Link
+          >
+        </li>
+      </ul>
+    
+      
+    </nav>
+    <!-- burgermenu -->
+    <button
+      id="burgermenu"
+      class="md:hidden"
+      x-on:click="showmenu = ! showmenu"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10">
+      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+    </svg>
+    
+    </button>
+  </div>
+
+  <!-- mobile view -->
+  <nav
+    id="mobilmenu"
+    class="flex flex-col pt-6 bg-white w-full md:hidden"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+
+  <ul class="text-right">
+   
+      <li class="pb-3">
+        <Link size="text-mg" variant="primary" href="#goals"
+          >Goals</Link
+        >
+      </li>
+      <li class="pb-3">  <Link size="text-mg" variant="primary" href="#skills" class="ml-8"
+          >Skills</Link
+        >
+      </li>
+      <li class="pb-3">  <Link size="text-mg" variant="primary" href="#project" class="ml-8"
+        >Project</Link
+      >
+    </li>
+      <li class="pb-3">  <Link size="text-mg" variant="primary" href="#about" class="ml-8"
+          >About Me</Link
+        >
+      </li>
+  </ul>
+  
+  </nav>
+</div>
+
+</div>
+
+
+
+
